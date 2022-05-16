@@ -9,4 +9,14 @@ const allItems = async () => {
   return items
 }
 
-export default { allItems }
+const singleItems = async (id) => {
+  const items = await Items.single(id)
+  return items
+}
+
+const itemsFromOrder = async (id) => {
+  const items = await Items.itemsOfOrder(id)
+  return items
+}
+
+export default { allItems, singleItems, itemsFromOrder }
