@@ -46,17 +46,17 @@ app.use(
     contentSecurityPolicy: false
   })
 )
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET,
-    cookie: {
-      maxAge: 60 * 60 * 1000 // 1 hour
-    },
-    store: sessionStore,
-    resave: false,
-    saveUninitialized: false
-  })
-)
+// app.use(
+//   session({
+//     secret: process.env.SESSION_SECRET,
+//     cookie: {
+//       maxAge: 60 * 60 * 1000 // 1 hour
+//     },
+//     store: sessionStore,
+//     resave: false,
+//     saveUninitialized: false
+//   })
+// )
 
 app.use(compression())
 app.use(express.json())
